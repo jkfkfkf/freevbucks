@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free V-Bucks Generator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .container {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    }
+    h1 {
+      color: #00ffff;
+    }
+    input, select, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    input, select {
+      background-color: #333;
+      color: white;
+    }
+    button {
+      background-color: #00bfff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0099cc;
+    }
+    .loading {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Free V-Bucks Generator</h1>
+    <p>Enter your Fortnite username</p>
+    <input type="text" id="username" placeholder="Epic Games Username" required />
+
+    <p>Select V-Bucks Amount</p>
+    <select id="vbucks">
+      <option value="1000">1,000 V-Bucks</option>
+      <option value="2500">2,500 V-Bucks</option>
+      <option value="5000">5,000 V-Bucks</option>
+      <option value="13500">
+∞</option>V-Bucks</option>
+    </select>
+
+    <button onclick="generateVbucks()">Generate</button>
+    <div class="loading" id="loading">Generating V-Bucks... Please wait.</div>
+  </div>
+
+  <script>
+    function generateVbucks() {
+      const username = document.getElementById('username').value;
+      const vbucks = document.getElementById('vbucks').value;
+
+      if (!username) {
+        alert("Please enter your Fortnite username!");
+        return;
+      }
+
+      document.getElementById('loading').style.display = 'block';
+
+      setTimeout(() => {
+        // Open the sigma gif in a new tab as the "prank"
+        window.open("https://www.youtube.com/watch?v=xvFZjo5PgG0", "_blank");
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
